@@ -46,9 +46,13 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
+<section class="photo-hero" id="photoHero">
+  <div class="photo-hero-sticky">
+    <div class="photo-hero-frame" id="heroFrame">
+      <img src="images/church-exterior.jpg" alt="All Saints' Episcopal Church, a red wood-sided chapel with a white cross, set on a green lawn in Wolcott, Connecticut" />
+      <div class="photo-hero-overlay"></div>
+    </div>
+    <div class="photo-hero-text" id="heroText">
       <div class="eyebrow">Wolcott, Connecticut</div>
       <h1>Whoever you are on the journey, <em>you are welcome here.</em></h1>
       <p class="lede">All Saints' is a family-friendly, diverse congregation on a peaceful hill just south of the Green, behind the Town Hall. Believer, doubter, or seeker — come as you are.</p>
@@ -56,14 +60,8 @@
         <a href="visit.html" class="btn btn-primary">Plan Your Visit</a>
         <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
       </div>
+      <div class="scroll-cue">Scroll to explore ↓</div>
     </div>
-    <svg class="hero-arch" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 380V160C20 80 80 20 160 20C240 20 300 80 300 160V380" stroke="#7A2130" stroke-width="2"/>
-      <path d="M50 380V165C50 96 98 48 160 48C222 48 270 96 270 165V380" stroke="#A87F3F" stroke-width="1.4" opacity="0.7"/>
-      <circle cx="160" cy="140" r="34" stroke="#35503E" stroke-width="1.4" opacity="0.8"/>
-      <path d="M160 106V174M126 140H194M137 117L183 163M183 117L137 163" stroke="#35503E" stroke-width="1" opacity="0.5"/>
-      <path d="M20 380H300" stroke="#7A2130" stroke-width="2"/>
-    </svg>
   </div>
 </section>
 
@@ -89,10 +87,7 @@
 </div>
 
 <section class="welcome">
-  <div class="wrap welcome">
-    <figure>
-      <img src="https://www.allsaintswolcott.org/Customer-Content/allsaintswolcott/CMS/images/Easter_Altar_2016.jpg" alt="The altar at All Saints' Episcopal Church, decorated for Easter" />
-    </figure>
+  <div class="wrap welcome" style="grid-template-columns: 1fr; max-width: 74ch;">
     <div class="welcome-copy">
       <div class="section-label">Welcome</div>
       <p>We are children of God who range in age from infants to ninety-two. We are people who seek to follow Jesus as best we can through prayer and service to others.</p>
@@ -116,26 +111,30 @@
     </div>
   </div>
   <div class="rhythm-track">
-    <div class="rhythm-item">
+    <a class="rhythm-item" href="worship.html">
       <div class="rhythm-day">Sunday</div>
       <div class="rhythm-title">Holy Eucharist</div>
       <div class="rhythm-time">10:00 AM, sanctuary</div>
-    </div>
-    <div class="rhythm-item">
+      <span class="rhythm-arrow">See the church →</span>
+    </a>
+    <a class="rhythm-item" href="fellowship.html">
       <div class="rhythm-day">Sunday</div>
       <div class="rhythm-title">Coffee Fellowship</div>
       <div class="rhythm-time">Following the service</div>
-    </div>
-    <div class="rhythm-item">
+      <span class="rhythm-arrow">Learn more →</span>
+    </a>
+    <a class="rhythm-item" href="prayer-garden.html">
       <div class="rhythm-day">Anytime</div>
       <div class="rhythm-title">Prayer Garden</div>
       <div class="rhythm-time">Open to the public</div>
-    </div>
-    <div class="rhythm-item">
+      <span class="rhythm-arrow">Visit the garden →</span>
+    </a>
+    <a class="rhythm-item" href="outreach.html">
       <div class="rhythm-day">Ongoing</div>
       <div class="rhythm-title">Choir &amp; Outreach</div>
       <div class="rhythm-time">See Parish Life for details</div>
-    </div>
+      <span class="rhythm-arrow">See how to join →</span>
+    </a>
   </div>
 </section>
 
@@ -205,5 +204,47 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var frame = document.getElementById('heroFrame');
+  var text = document.getElementById('heroText');
+  var hero = document.getElementById('photoHero');
+  if (!frame || !hero) return;
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  var ticking = false;
+
+  function update() {
+    var heroHeight = hero.offsetHeight - window.innerHeight; // scrollable run for the sticky panel
+    var scrolled = Math.min(Math.max(window.scrollY, 0), heroHeight);
+    var progress = heroHeight > 0 ? scrolled / heroHeight : 0;
+
+    var scale = 1 - progress * 0.22;
+    var radius = progress * 32;
+    frame.style.transform = 'scale(' + scale.toFixed(4) + ')';
+    frame.style.borderRadius = radius.toFixed(1) + 'px';
+
+    var textOpacity = Math.max(1 - progress * 2.2, 0);
+    var textShift = progress * 40;
+    text.style.opacity = textOpacity.toFixed(3);
+    text.style.transform = 'translateY(-' + textShift.toFixed(1) + 'px)';
+
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
 </body>
 </html>
