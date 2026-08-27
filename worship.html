@@ -1,118 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Holy Eucharist — All Saints' Episcopal Church</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-<div class="utility-bar">
-  <div class="wrap">
-    <a href="https://www.episcopalchurch.org/" target="_blank" rel="noopener">The Episcopal Church</a>
-    <a href="https://www.anglicancommunion.org/" target="_blank" rel="noopener">The Anglican Communion</a>
-    <a href="https://www.episcopalct.org/" target="_blank" rel="noopener">Diocese of Connecticut</a>
-  </div>
-</div>
-
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2C11 9 6 16 6 24C6 32.8 12.3 38 20 38C27.7 38 34 32.8 34 24C34 16 29 9 20 2Z" stroke="#7A2130" stroke-width="1.6"/>
-        <path d="M20 10V38" stroke="#A87F3F" stroke-width="1.2"/>
-        <path d="M20 30L14 24H26L20 30Z" fill="#A87F3F"/>
-      </svg>
-      <span class="brand-text">
-        <span class="name-line1">All Saints'</span>
-        <span class="name-line2">Episcopal Church, Wolcott CT</span>
-      </span>
-    </a>
-    <button class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">Menu ▾</button>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="visit.html">Visit &amp; Service Times</a>
-      <a href="clergy.html">Clergy</a>
-      <a href="#">Sermons</a>
-      <a href="#">Parish Life</a>
-      <a href="#">Newsletters</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<div class="detail-banner">
-  <img src="images/church-exterior.jpg" alt="All Saints' Episcopal Church exterior, a red chapel with a white cross on the front gable" />
-  <div class="banner-overlay">
-    <div class="banner-text">
-      <div class="eyebrow">Sunday, 10:00 AM</div>
-      <h1>Holy Eucharist</h1>
-    </div>
-  </div>
-</div>
-
-<div class="wrap">
-  <div class="detail-nav">
-    <a class="back-link" href="index.html">← Back to Home</a>
-    <a href="clergy.html">Meet our clergy →</a>
-  </div>
-</div>
-
-<section>
-  <div class="wrap content-columns">
-    <div class="prose">
-      <h2>Our Sunday Service</h2>
-      <p>Holy Eucharist is celebrated every Sunday at 10:00 AM in our sanctuary — the small red chapel on Bound Line Road that's welcomed this parish for generations. The service is led by our clergy, currently Deacon CJ and Father Andy Zeiman, our supply priest for 2026.</p>
-
-      <h2>What to Expect</h2>
-      <p>Come as you are. The service includes hymns, scripture, a sermon, and Holy Communion, in the traditional Episcopal liturgy. Families with children are always welcome, and there's no need to worry about a little noise — this is a family-friendly congregation from infants to ninety-two.</p>
-
-      <h2>After the Service</h2>
-      <p>Stay for coffee fellowship in the parish hall, where the conversation is as much a part of Sunday morning as the service itself.</p>
-    </div>
-
-    <aside class="side-panel">
-      <h3>Service Details</h3>
-      <dl>
-        <dt>When</dt>
-        <dd>Sundays, 10:00 AM</dd>
-        <dt>Where</dt>
-        <dd>282 Bound Line Road, Wolcott, CT</dd>
-        <dt>Led By</dt>
-        <dd>Deacon CJ &amp; Fr. Andy Zeiman</dd>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">All Saints' Episcopal Church</div>
-        <p>282 Bound Line Road<br>P.O. Box 6015<br>Wolcott, Connecticut 06716</p>
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worship | All Saints' Episcopal Church</title>
+  <meta name="description" content="Sunday Holy Eucharist at All Saints' Episcopal Church in Wolcott, CT begins at 10:00 AM. Learn what to expect.">
+  <meta name="theme-color" content="#541b28"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="All Saints' Episcopal Church home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 2C11 9 6 16 6 24c0 8.8 6.3 14 14 14s14-5.2 14-14C34 16 29 9 20 2Z" stroke="#79283a" stroke-width="1.6"/><path d="M20 10v28M14 24h12" stroke="#a77b35" stroke-width="1.4"/></svg><span class="brand-text"><span class="name-line1">All Saints'</span><span class="name-line2">Episcopal Church · Wolcott</span></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">▾</span></button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation"><a href="visit.html">Visit</a><a class="active" aria-current="page" href="worship.html">Worship</a><a href="parish-life.html">Parish Life</a><a href="clergy.html">Leadership</a><a href="contact.html">Contact</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-hero"><div class="wrap"><div class="eyebrow">Sundays at 10:00 AM</div><h1>Worship at All Saints'</h1><p>We gather each week around scripture, prayer, music, and Holy Communion—and there is always room for you.</p></div></section>
+    <section class="content-section"><div class="wrap content-columns">
+      <div class="prose">
+        <h2>Holy Eucharist</h2><p>Our Sunday service follows the Episcopal liturgy and is led by Deacon CJ and the Rev. Andy Zeiman, our supply priest for 2026. Printed materials help everyone follow along.</p>
+        <h2>Come as you are</h2><p>You do not need to know the words, belong to the parish, or have a particular background. You may join in as you feel comfortable. Families and children are always welcome.</p>
+        <h2>Holy Communion</h2><p>All baptized Christians are welcome to receive Communion. If you would rather receive a blessing or remain in your seat, either choice is completely welcome.</p>
+        <h2>After the service</h2><p>Coffee fellowship follows in the parish hall. Stay for a cup and conversation—we would be glad to meet you.</p>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="tel:+12038792800">(203) 879-2800</a>
-        <a href="mailto:allsaintswolcott@gmail.com">allsaintswolcott@gmail.com</a>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <a href="https://www.episcopalct.org/" target="_blank" rel="noopener">Diocese of Connecticut</a>
-        <a href="https://www.episcopalchurch.org/" target="_blank" rel="noopener">The Episcopal Church</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 All Saints' Episcopal Church, Wolcott, CT</span>
-      <span>Site built with care by the parish</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+      <aside class="side-panel"><h3>Service details</h3><dl><dt>When</dt><dd>Sundays at 10:00 AM</dd><dt>Where</dt><dd>282 Bound Line Road<br>Wolcott, CT</dd><dt>Leadership</dt><dd>Deacon CJ and the Rev. Andy Zeiman</dd><dt>Afterward</dt><dd>Coffee fellowship in the parish hall</dd></dl><div class="link-list"><a href="visit.html"><span>Plan your first visit</span><span aria-hidden="true">→</span></a></div></aside>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">All Saints' Episcopal Church</div><p>282 Bound Line Road<br>P.O. Box 6015<br>Wolcott, Connecticut 06716</p></div><div><h2>Contact</h2><a href="tel:+12038792800">(203) 879-2800</a><a href="mailto:allsaintswolcott@gmail.com">allsaintswolcott@gmail.com</a></div><div><h2>Our wider church</h2><a href="https://www.episcopalct.org/">Episcopal Church in Connecticut</a><a href="https://www.episcopalchurch.org/">The Episcopal Church</a></div></div><div class="footer-bottom"><span>© 2026 All Saints' Episcopal Church</span><span>Whoever you are on the journey, you are welcome here.</span></div></div></footer>
+</body></html>
