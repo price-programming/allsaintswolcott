@@ -31,13 +31,4 @@ phone, email, leadership, and footer information appear on multiple pages;
 search the repository for the old value before changing one of these shared
 details.
 
-The site uses real, optimized parish photos. Keep new images reasonably sized
-for the web and avoid stock or AI-generated images that could be mistaken for
-the actual church or congregation.
-
-## Before publishing
-
-- Confirm the listed clergy and leadership roles are current.
-- Confirm the prayer garden is open daily from dawn to dusk.
-- Confirm service time, phone, email, street address, and mailing address.
-- Test the site on a phone and run a Lighthouse accessibility check.
+The site uses real, high-quality Parish photos, avoiding the use of any AI-Generated or Stock images. Updates will be done by the owner (me, most likely only will be me), but also can be merged PRs.
